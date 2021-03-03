@@ -1,3 +1,14 @@
+Compilation
+===========
+In order to build, simply make sure:
+ 1. You have golang installed and working
+ 2. Clone the repo locally `git clone https://github.com/cosaction/twilio_json2csv`
+ 3. Use go to compile using one of the commands below
+
+To compile for multiple platforms, simply use: `gox`
+
+To compile for just the platform you're on: `go build`
+
 Usage
 =====
 The intent of this tool is to be a quickly made application for converting json-based
@@ -15,7 +26,7 @@ If you want to override the input (JSON) filename, you can do this by specifying
 If you want to override the output (CSV) filename, you can do this by specifying '-out [fileName]'.
 
 Usage Examples:
-
+```
 twilio_json2csv.exe                      -- This will read in twilio.json and output twilio.csv
                                      to/from the same directory that json2csv.exe is in
 
@@ -25,10 +36,10 @@ twilio_json2csv.exe -in otherFile.json   -- This will read in otherFile.sjon and
 twilio_json2csv.exe -out newOutFile.csv  -- This will read in twilio.csv and output newOutFile.csv
                                      to/from the same directory that json2csv.exe in in
 
-
+```
 You may mix and match the -in and -out commands, as well as provide full paths to files to read
 or write, for example:
 
-twilio_json2csv.exe -in otherFile.json -out C:\Documents\newOutFile.csv
+`twilio_json2csv.exe -in otherFile.json -out C:\Documents\newOutFile.csv`
 
 Would read-in otherFile.json and output the results to newOutFile.csv in the C:\Documents\ folder.
